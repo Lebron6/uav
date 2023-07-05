@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+    <EditText
+            android:id="@+id/et_socket_ip"
+            android:layout_width="@dimen/x670"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x89"
+            android:background="@drawable/et_bg_gray"
+            android:gravity="left|center_vertical"
+            android:hint="请输入SocketIP地址"
+            android:paddingLeft="@dimen/x20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            />
+    <EditText
+            android:id="@+id/et_port"
+            android:layout_width="@dimen/x670"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/et_bg_gray"
+            android:gravity="left|center_vertical"
+            android:hint="请输入Socket 端口"
+            android:paddingLeft="@dimen/x20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            />
+    <EditText
+            android:id="@+id/et_fly_num"
+            android:layout_width="@dimen/x670"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/et_bg_gray"
+            android:gravity="left|center_vertical"
+            android:hint="请输入飞行器编号"
+            android:paddingLeft="@dimen/x20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            />
+    <EditText
+            android:id="@+id/et_interface_ip"
+            android:layout_width="@dimen/x670"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/et_bg_gray"
+            android:gravity="left|center_vertical"
+            android:hint="请输入http接口IP地址"
+            android:paddingLeft="@dimen/x20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            />
+    <RelativeLayout
+            android:layout_width="@dimen/x656"
+            android:layout_height="@dimen/x188"
+            android:layout_gravity="center_horizontal"
+            >
+
+        <Button
+                android:id="@+id/btn_setting"
+                android:layout_width="@dimen/x580"
+                android:layout_height="@dimen/x88"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_bg_blue"
+                android:gravity="center"
+                android:text="配置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x32" />
+    </RelativeLayout>
+
+
+</LinearLayout>

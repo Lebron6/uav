@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+<RelativeLayout
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:background="@drawable/bg_mission_item"
+        android:gravity="center"
+        android:padding="@dimen/x20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x157">
+    <ImageView
+            android:id="@+id/iv_map"
+            android:layout_width="@dimen/x197"
+            android:layout_height="@dimen/x116"
+            android:layout_centerVertical="true"
+            android:minHeight="150dp"
+            android:minWidth="250dp"
+            android:scaleType="fitXY" />
+
+    <LinearLayout
+            android:layout_marginLeft="@dimen/x10"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/iv_map"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:textStyle="bold"
+                android:text="航线名称：工业园区"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        <TextView
+                android:id="@+id/tv_date"
+                android:text="2021.10.14"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        <TextView
+                android:id="@+id/tv_position"
+                android:singleLine="true"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:text="金鸡湖大道国际科技园C102"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>
+
+</RelativeLayout>
+

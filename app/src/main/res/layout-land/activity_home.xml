@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@mipmap/home_bg"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/layout_top"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60"
+            android:background="@color/top_bg"
+            android:gravity="center_vertical">
+
+        <ImageView
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_logo" />
+
+    </RelativeLayout>
+
+    <View
+            android:layout_below="@+id/layout_top"
+            android:background="#A4DAFF"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+    <RelativeLayout
+            android:id="@+id/layout_start_fly"
+            android:background="@mipmap/bg_start_fly"
+            android:layout_marginTop="@dimen/x180"
+            android:layout_marginLeft="@dimen/x116"
+            android:layout_width="@dimen/x466"
+            android:layout_height="@dimen/x392"
+            tools:ignore="Orientation">
+        <ImageView
+                android:id="@+id/iv_plane_name"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/x189"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/layout_mission_plan"
+            android:background="@mipmap/bg_mission_plan"
+            android:layout_marginTop="@dimen/x180"
+            android:layout_marginLeft="@dimen/y755"
+            android:layout_width="@dimen/x466"
+            android:layout_height="@dimen/x392"
+            tools:ignore="Orientation"></RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/layout_config"
+            android:layout_marginLeft="@dimen/x9"
+            android:gravity="bottom|center_horizontal"
+            android:background="@mipmap/icon_gallery"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80">
+
+        <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/x11"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x16"
+                android:text="配置"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/layout_gallay"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginRight="@dimen/x213"
+            android:background="@mipmap/icon_gallery"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80">
+
+        <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/x11"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x16"
+                android:text="图库"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:id="@+id/layout_record"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginRight="@dimen/x111"
+            android:background="@mipmap/icon_record"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80">
+
+        <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/x10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x16"
+                android:text="记录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/layout_exit"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginRight="@dimen/x9"
+            android:background="@mipmap/icon_exit"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80">
+
+        <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/x10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x16"
+                android:text="退出"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</RelativeLayout>

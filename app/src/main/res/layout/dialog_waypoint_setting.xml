@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="@dimen/x700"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="MissingDefaultResource">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="航线设置"
+            android:layout_gravity="center_horizontal">
+    </TextView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高度:"></TextView>
+
+        <EditText
+                android:id="@+id/altitude"
+                android:inputType="number"
+                android:text="120"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"></EditText>
+        <TextView
+                android:layout_marginLeft="@dimen/x70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名称:"></TextView>
+
+        <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="速度:"></TextView>
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/speed"
+                android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                    android:id="@+id/lowSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="低" />
+
+            <RadioButton
+                    android:id="@+id/MidSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中" />
+
+            <RadioButton
+                    android:id="@+id/HighSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束动作:" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/actionAfterFinished"
+                android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                    android:id="@+id/finishNone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="None" />
+
+            <RadioButton
+                    android:id="@+id/finishGoHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="自动返航" />
+
+            <RadioButton
+                    android:id="@+id/finishAutoLanding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="自动降落" />
+
+            <RadioButton
+                    android:id="@+id/finishToFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="飞回第一个航点" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="机头朝向:" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/heading"
+                android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                    android:id="@+id/headingNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="自动" />
+
+            <RadioButton
+                    android:id="@+id/headingInitDirec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="起始点固定" />
+
+            <RadioButton
+                    android:id="@+id/headingRC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="遥控器控制" />
+
+            <RadioButton
+                    android:id="@+id/headingWP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5pt"
+                    android:text="跟随航线" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/tv_cancel"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/x34"
+                android:text="取消"
+                android:layout_height="@dimen/x80" />
+        <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"/>
+        <TextView
+                android:id="@+id/tv_sure"
+                android:text="确认"
+                android:gravity="center" android:textSize="@dimen/x34"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/x80" />
+    </LinearLayout>
+</LinearLayout>

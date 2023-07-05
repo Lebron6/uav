@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/apk/res-auto"
+        xmlns:custom="http://schemas.android.com/tools"
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:background="@color/top_bg"
+            android:id="@+id/layout_previewer_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.mg.uav.ui.view.VideoFeedView
+                android:id="@+id/video_previewer_surface"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <TextView
+                android:id="@+id/tv_live_url"
+                android:paddingLeft="@dimen/x17"
+                android:paddingRight="@dimen/x17"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x41"
+                android:layout_marginTop="@dimen/x90"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/x30"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/x17" />
+        <TextView
+                android:id="@+id/tv_stream_fps"
+                android:layout_below="@+id/tv_live_url"
+                android:paddingLeft="@dimen/x17"
+                android:paddingRight="@dimen/x17"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x41"
+                android:layout_marginTop="@dimen/x30"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/x30"
+                android:gravity="center"
+                android:text="fps"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/x17" />
+
+        <TextView
+                android:id="@+id/tv_stream_rate"
+                android:layout_below="@+id/tv_stream_fps"
+                android:paddingLeft="@dimen/x17"
+                android:paddingRight="@dimen/x17"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x41"
+                android:layout_marginTop="@dimen/x30"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/x30"
+                android:gravity="center"
+                android:text="码率"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/x17" />
+
+    </RelativeLayout>
+
+
+    <dji.ux.widget.MapWidget
+            android:id="@+id/map_widget"
+            android:layout_width="144dp"
+            android:layout_height="81dp"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true" />
+    <dji.ux.widget.TakeOffWidget
+            android:layout_marginBottom="@dimen/x100"
+            android:layout_toRightOf="@+id/map_widget"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+            android:id="@+id/take_off_widget"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+    <dji.ux.widget.ReturnHomeWidget
+            android:layout_toRightOf="@+id/take_off_widget"
+            android:layout_marginBottom="@dimen/x100"
+
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:id="@+id/return_home_widget"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:background="@color/top_bg"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="@dimen/x19"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_width="@dimen/x422"
+            android:layout_height="@dimen/x165"
+            android:id="@+id/dashboard_widget"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+        <RelativeLayout
+                android:layout_toLeftOf="@+id/compassWidget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:text="SPD"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x36"
+                    android:layout_marginLeft="@dimen/x49"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:id="@+id/tv_sped"
+                    android:text="0.0"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x57"
+                    android:layout_marginLeft="@dimen/x34"
+                    android:textSize="@dimen/x17"
+                    android:textColor="#37A4FF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="m/s"
+                    android:layout_marginTop="@dimen/x60"
+                    android:layout_marginLeft="@dimen/x71"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="WS"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x100"
+                    android:layout_marginLeft="@dimen/x36"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="西南风"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x100"
+                    android:layout_marginLeft="@dimen/x66"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:id="@+id/tv_wind_sped"
+                    android:text="0.0"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x122"
+                    android:layout_marginLeft="@dimen/x33"
+                    android:textSize="@dimen/x17"
+                    android:textColor="#37A4FF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="m/s"
+                    android:layout_marginTop="@dimen/x123"
+                    android:layout_marginLeft="@dimen/x73"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <dji.ux.widget.dashboard.CompassWidget
+                android:id="@+id/compassWidget"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/x150"
+                android:layout_height="@dimen/x150" />
+
+        <RelativeLayout
+                android:layout_toRightOf="@+id/compassWidget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:text="VS"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x36"
+                    android:layout_marginLeft="@dimen/x49"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:id="@+id/tv_v_sped"
+                    android:text="0.0"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x57"
+                    android:layout_marginLeft="@dimen/x34"
+                    android:textSize="@dimen/x17"
+                    android:textColor="#37A4FF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="m/s"
+                    android:layout_marginTop="@dimen/x60"
+                    android:layout_marginLeft="@dimen/x71"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="ALT"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x100"
+                    android:layout_marginLeft="@dimen/x49"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:id="@+id/tv_alt"
+                    android:text="0.0"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/x122"
+                    android:layout_marginLeft="@dimen/x33"
+                    android:textSize="@dimen/x17"
+                    android:textColor="#37A4FF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:text="m"
+                    android:layout_marginTop="@dimen/x123"
+                    android:layout_marginLeft="@dimen/x73"
+                    android:textSize="@dimen/x13"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <!-- <RelativeLayout
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginBottom="@dimen/x10"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/x187"
+                android:layout_height="@dimen/x162">-->
+    <RelativeLayout
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginBottom="@dimen/x100"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/x187"
+            android:layout_height="@dimen/x162">
+
+        <LinearLayout
+                android:layout_above="@+id/layout_change_preview"
+                android:id="@+id/layout_mission_chose"
+                android:gravity="center"
+                android:background="#900056A2"
+                android:layout_width="@dimen/x187"
+                android:layout_height="@dimen/x53">
+
+            <ImageView
+                    android:background="@mipmap/ic_launcher"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+            <TextView
+                    android:textColor="@color/white"
+                    android:text="航线选择"
+                    android:layout_marginLeft="@dimen/x25"
+                    android:textSize="@dimen/x18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="@dimen/x3"
+                android:background="#900056A2"
+
+                android:layout_marginBottom="@dimen/x3"
+                android:layout_above="@+id/layout_start_mission"
+                android:id="@+id/layout_change_preview"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/x187"
+                android:layout_height="@dimen/x53">
+
+            <ImageView
+                    android:background="@mipmap/ic_launcher"
+
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+            <TextView
+                    android:layout_marginLeft="@dimen/x25"
+                    android:textColor="@color/white"
+                    android:text="切换视角"
+                    android:textSize="@dimen/x18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layout_start_mission"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_gradual"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/x187"
+                android:layout_height="@dimen/x53">
+
+            <ImageView
+                    android:background="@mipmap/ic_launcher"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+            <TextView
+                    android:layout_marginLeft="@dimen/x25"
+                    android:textColor="@color/white"
+                    android:text="起飞"
+                    android:textSize="@dimen/x18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <com.mg.uav.ui.view.LongTouchBtn
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_up"
+            android:gravity="center"
+            android:text="上"
+            android:layout_toRightOf="@+id/return_home_widget"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+    <com.mg.uav.ui.view.LongTouchBtn
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+
+            android:id="@+id/btn_down"
+            android:gravity="center"
+            android:text="下"
+            android:layout_toRightOf="@+id/btn_up"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+    <com.mg.uav.ui.view.LongTouchBtn
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+
+            android:id="@+id/btn_forward"
+            android:gravity="center"
+            android:text="前"
+            android:layout_toRightOf="@+id/btn_down"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+    <com.mg.uav.ui.view.LongTouchBtn
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_backward"
+            android:gravity="center"
+            android:text="后"
+            android:layout_toRightOf="@+id/btn_forward"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+    <Button
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_restart_live_show"
+            android:gravity="center"
+            android:text="重推"
+            android:layout_toRightOf="@+id/btn_backward"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+    <Button
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_stop_live"
+            android:gravity="center"
+            android:text="停推"
+            android:layout_toRightOf="@+id/btn_restart_live_show"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+
+
+    <com.mg.uav.ui.view.LongTouchBtn
+            android:visibility="gone"
+            android:id="@+id/btn_left"
+            android:gravity="center"
+            android:text="左"
+            android:layout_toRightOf="@+id/btn_backward"
+            android:layout_alignParentBottom="true"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+    <com.mg.uav.ui.view.LongTouchBtn
+            android:visibility="gone"
+            android:id="@+id/btn_right"
+            android:gravity="center"
+            android:text="右"
+            android:layout_toRightOf="@+id/btn_left"
+            android:layout_alignParentBottom="true"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+    <LinearLayout
+            android:id="@+id/layout_top"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60"
+            android:background="#800B253A"
+            android:gravity="center_vertical">
+
+        <dji.ux.widget.PreFlightStatusWidget
+                android:layout_width="180dp"
+                android:layout_height="25dp" />
+
+        <dji.ux.widget.FlightModeWidget
+                android:layout_width="103dp"
+                android:layout_height="22dp" />
+
+        <dji.ux.widget.GPSSignalWidget
+                android:layout_width="44dp"
+                android:layout_height="22dp" />
+
+        <dji.ux.widget.VisionWidget
+                android:layout_width="22dp"
+                android:layout_height="22dp" />
+
+        <dji.ux.widget.RemoteControlSignalWidget
+                android:layout_width="38dp"
+                android:layout_height="22dp" />
+
+        <dji.ux.widget.VideoSignalWidget
+                android:layout_width="38dp"
+                android:layout_height="22dp" />
+
+        <dji.ux.widget.WiFiSignalWidget
+                android:layout_width="32dp"
+                android:layout_height="25dp" />
+
+        <dji.ux.widget.BatteryWidget
+                android:layout_width="96dp"
+                android:layout_height="22dp"
+                custom:excludeView="singleVoltage" />
+
+        <dji.ux.widget.ConnectionWidget
+                android:layout_marginTop="3dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
+    </LinearLayout>
+
+    <View
+
+            android:layout_below="@+id/layout_top"
+            android:background="#A4DAFF"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+
+</RelativeLayout>
